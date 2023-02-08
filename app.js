@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express= require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -34,11 +35,11 @@ app.post("/", function(req,res){
 
 let jsonData= JSON.stringify(data);
 
-const url="https://us8.api.mailchimp.com/3.0/lists/f6e9ac02ef";
+const url= process.env.API_KEY;
 
 const options={
     method:"POST",
-    auth: "tobiloba:4b62564eb191e8a1b8a1c7bc5cbdbf8-us8"
+    auth: process.env.AUTH
 }
 
 const request= https.request(url, options, function(response){
@@ -78,7 +79,7 @@ app.listen(process.env.PORT || 3000, function(){
 
 
  // User ID
-// 9ec3de876979ae513fdbb78971749e54-us8
+// f624a574161ba5804ca8f28b1c0c9a02-us8
 
  //list ID
 // f6e9ac02ef
