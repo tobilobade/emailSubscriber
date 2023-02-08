@@ -78,8 +78,4 @@ app.listen(process.env.PORT || 3000, function(){
 })
 
 
- // User ID
-// f624a574161ba5804ca8f28b1c0c9a02-us8
-
- //list ID
-// f6e9ac02ef
+ 
